@@ -12,7 +12,6 @@ root
 │   README.md
 └─── dataflow_api
 └─── doc
-└─── plot
 └─── scripts
 └─── src
 ```
@@ -20,7 +19,6 @@ root
 |--------|----------|
 | `dataflow_api` | A static analysis tool. It provides the dataflow-based programmingabstraction for users to write transactions' store procedures (`Sec 3.2`) |
 | `doc` | The documents of Hackwrench. |
-| `plot` | The gnuplot scripts and evaluation result of figures in the paper. |
 | `scripts` | The scripts used to build and run Hackwrench |
 | `src` | Hackwrench's source code |
 
