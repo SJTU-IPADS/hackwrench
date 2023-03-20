@@ -1,6 +1,10 @@
 # Hackwrench
 
-This is the code repo for codebase of paper#615 of VLDB'23. 
+Hackwrench is a cloud native database which separates computation (transaction execution) and data storage logic.
+
+# Publication
+
+* Zhiyuan Dong, Zhaoguo Wang, Xiaodong Zhang, Xian Xu, Changgeng Zhao, Haibo Chen, Aurojit Panda, Jinyang Li. **Fine-Grained Re-Execution for Efficient Batched Commit of Distributed Transactions**. The 49th International Conference on Very Large Data Bases (VLDB '23), Vancouver, Canada, 2023.
 
 ## Code organization
 
