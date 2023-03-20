@@ -1,0 +1,7 @@
+execution_graph
+third_party
+build
+rpc/SNinterface.capnp.c++
+rpc/SNinterface.capnp.h
+scripts/data
+scripts/localhost

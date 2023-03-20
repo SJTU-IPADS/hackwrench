@@ -1,0 +1,104 @@
+ips:
+- 172.31.31.131
+- 172.31.21.82
+- 172.31.28.83
+- 172.31.31.198
+- 172.31.20.249
+- 172.31.26.205
+- 172.31.21.9
+- 172.31.21.146
+- 172.31.18.169
+- 172.31.27.6
+- 172.31.22.66
+- 172.31.31.131
+- 172.31.21.82
+- 172.31.28.83
+- 172.31.31.198
+- 172.31.20.249
+- 172.31.26.205
+- 172.31.21.9
+- 172.31.21.146
+- 172.31.18.169
+- 172.31.27.6
+# - 172.31.27.115
+# - 172.31.29.110
+# - 172.31.18.46
+# - 172.31.27.10
+# - 172.31.26.173
+# - 172.31.16.152
+# - 172.31.18.96
+# - 172.31.19.160
+# - 172.31.23.191
+# - 172.31.26.8
+# - 172.31.24.42
+# - 172.31.22.102
+# - 172.31.17.99
+# - 172.31.20.211
+# - 172.31.29.79
+# - 172.31.17.178
+# - 172.31.16.65
+# - 172.31.25.34
+# - 172.31.21.91
+# - 172.31.25.27
+# - 172.31.23.88
+# - 172.31.30.91
+# - 172.31.18.156
+# - 172.31.28.132
+# - 172.31.26.197
+# - 172.31.30.67
+# - 172.31.24.67
+# - 172.31.17.86
+# - 172.31.25.55
+# - 172.31.26.240
+# - 172.31.25.85
+# - 172.31.20.46
+# - 172.31.26.15
+# - 172.31.28.201
+# - 172.31.23.171
+type:
+- StorageNode
+- StorageNode
+- StorageNode
+- StorageNode
+- StorageNode
+- StorageNode
+- StorageNode
+- StorageNode
+- StorageNode
+- StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+# - StorageNode
+- TimeServer
+- DataBase
+- DataBase
+- DataBase
+- DataBase
+- DataBase
+- DataBase
+- DataBase
+- DataBase
+- DataBase
+- DataBase
+# - DataBase
+# - DataBase
+# - DataBase
+# - DataBase
+# - DataBase

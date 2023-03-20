@@ -1,0 +1,4 @@
+""	RSet/WSet	Timestamp	TxnInput	Dependency	DeltaWriteSet
+"Fast\n-Prepare"	34213	1725	12437	9635	0
+"Normal\n-Prepare"	34213	537	4139	0	0
+"Normal\n-Commit"	0	0	0	0	9759
