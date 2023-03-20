@@ -56,7 +56,7 @@ cmake ..
 make -j4
 ```
 
-## Step 3: Recognize the Binaries
+<!-- ## Step 3: Recognize the Binaries
 
 After then, we have successfully built Hackwrench binaries. The descriptions of binaries are listed as following:
 
@@ -68,3 +68,6 @@ After then, we have successfully built Hackwrench binaries. The descriptions of 
 | `hackwrench_batch_abort` | Hackwrench without timestamp server, repair, and fast path optimization.  |
 | `hackwrench_ts` | Hackwrench without repair and fast path optimization.  |
 | `hackwrench_repair` | Hackwrench without fast path optimization.  |
+
+
+Note: the binary information is not complete and will be completed soon. -->

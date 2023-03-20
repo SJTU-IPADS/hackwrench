@@ -40,51 +40,27 @@ type:
 ...
 ```
 
-Please note that, AWS provide both public and private IP address for each instance. We recomand to use private IP. 
+Please note that, AWS provides both public and private IP address for each instance. We recommend to use private IP. 
 
 ## Step 2: Use the Experiment Scripts for Running 
 
 To run the experiments, please go to `root/scripts` directories. The template command and all commands used in evaluation are shown as following:
 * The `script_name` corresponding to the python scripts starts with number in `root/scripts`, which automatically run Hackwrench and collect the execution result distributedly.
 * `workload` has two options: `tpcc` corresponds to TPC-C workload and `ycsb10` corresponds to FDB-micro microbenchmark in the paper.
-* `option value` is an optional configuration value for each scripts and its meanning changes accordingly.
+* `option value` is an optional configuration value for each script and its meaning changes accordingly.
 
 ```bash
-# template
-./eval/{script_name}.py aws {workload} {option value} {binary_name}
-
-# Figure 4 (19 instances used)
-./eval/1_tpcc_tput_lat.py aws tpcc 0 hackwrench
-./eval/1_tpcc_tput_lat.py aws tpcc 0 hackwrench_occ
-
-# Table 1 (19 instances used)
-./eval/2_tpcc_lat.py aws tpcc 1 hackwrench_lat
-./eval/2_tpcc_lat.py aws tpcc 50 hackwrench_lat
-./eval/2_tpcc_lat.py aws tpcc 1 hackwrench_occ_lat
-
-# Figure 5 (19 instances used)
-./eval/3_factor_analysis.py aws tpcc 0 hackwrench_occ
-./eval/3_factor_analysis.py aws tpcc 0 hackwrench_batch_abort
-./eval/3_factor_analysis.py aws tpcc 0 hackwrench_ts
-./eval/3_factor_analysis.py aws tpcc 0 hackwrench_repair
-./eval/3_factor_analysis.py aws tpcc 0 hackwrench
-
-# Figure 6 (46 instances used)
-./eval/4_tpcc_scalability.py aws tpcc 0 hackwrench
-
-# Figure 7 (25 instances used)
-./eval/5_micro_contention.py aws ycsb10 0 hackwrench
-./eval/5_micro_contention.py aws ycsb10 0 hackwrench_occ
-
-# Figure 8 (25 instances used)
-./eval/6_micro_batch_effect.py aws ycsb10 10 hackwrench
-./eval/6_micro_batch_effect.py aws ycsb10 60 hackwrench
-
-# Figure 9 (25 instances used)
-./eval/7_micro_cache_effect.py aws ycsb10 0 hackwrench
-./eval/7_micro_cache_effect.py aws ycsb10 0 hackwrench_repair
-./eval/7_micro_cache_effect.py aws ycsb10 0 hackwrench_occ
-
+./figure/0_motivation.sh
+./figure/1_tpcc_tput.sh
+./figure/2_tpcc_lat.sh
+./figure/3_factor_analysis.sh
+./figure/4_tpcc_coco.sh
+./figure/5_tpcc_sundial.sh
+./figure/6_tpcc_scalability.sh
+./figure/7_micro_contention.sh
+./figure/8_micro_ts.sh
+./figure/9_micro_batch_effect.sh
+./figure/10_micro_cache_effect.sh
 ```
 ### Prepare enough AWS instances
 
@@ -112,18 +88,6 @@ The results have two dimension, one is `parameter` and the other is `{x}-{col_na
 | `batch_abort_ratio` | The ratio of `logical transactions`(Sec 4) aborted by cross database nodes conflicts. |
 | `average_batch_size` | The average number of transactions in one `logical transaction`. |
 | `mean_lat`/`p50`/`p90`/`p99` | The average, p50, p90, and p99 latency. |
-
-For each type of scripts, the meaning of `parameter`, `x`, and `option value` are:
-
-| `script_name` | `parameter`  | `x`  | `option_value` |
-|--------|----------|----------| -----|
-| `1_tpcc_tput_lat` | / | remote access probability (`x/1000`) | / |
-| `2_tpcc_lat` | number of clients | controled by `{option value}` | maximal batch size |
-| `3_factor_analysis` | / | remote access probability (`x/1000`) | / |
-| `4_tpcc_scalability` | number of database nodes | remote access probability (`x/10`) | / |
-| `5_micro_contention` | number of database nodes | zipf theta (`x/100`) | / |
-| `6_micro_batch_effect` | number of clients | maximal batch size | zipf theta (`x/100`) |
-| `7_micro_cache_effect` | cache_miss_ratio | num_of_clients | / |
 
 
 
