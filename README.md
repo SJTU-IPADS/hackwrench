@@ -6,6 +6,10 @@ Hackwrench is a cloud native database which separates computation (transaction e
 
 * Zhiyuan Dong, Zhaoguo Wang, Xiaodong Zhang, Xian Xu, Changgeng Zhao, Haibo Chen, Aurojit Panda, Jinyang Li. **Fine-Grained Re-Execution for Efficient Batched Commit of Distributed Transactions**. The 49th International Conference on Very Large Data Bases (VLDB '23), Vancouver, Canada, 2023.
 
+# Source Repo
+
+The primarily used repository for this project resides in [https://ipads.se.sjtu.edu.cn:1312/opensource/hackwrench](https://ipads.se.sjtu.edu.cn:1312/opensource/hackwrench)
+
 ## Code organization
 
 The following figure shows the code structure of the overall project.
